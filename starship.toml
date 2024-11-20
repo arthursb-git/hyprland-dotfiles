@@ -1,0 +1,208 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[](polar2)\
+$os\
+$username\
+[](bg:polar3 fg:polar2)\
+$directory\
+[](fg:polar3 bg:frost3)\
+$git_branch\
+$git_status\
+[](fg:frost3 bg:frost2)\
+$c\
+$rust\
+$golang\
+$nodejs\
+$php\
+$java\
+$kotlin\
+$haskell\
+$python\
+[](fg:frost2 bg:frost1)\
+$docker_context\
+[](fg:frost1 bg:polar2)\
+$time\
+[ ](fg:polar2)\
+$line_break$character"""
+
+palette = 'nord_colors'
+
+[palettes.gruvbox_dark]
+color_fg0 = '#fbf1c7'
+color_bg1 = '#3c3836'
+color_bg3 = '#665c54'
+color_blue = '#458588'
+color_aqua = '#689d6a'
+color_green = '#98971a'
+color_orange = '#d65d0e'
+color_purple = '#b16286'
+color_red = '#cc241d'
+color_yellow = '#d79921'
+
+[palettes.catppuccin_mocha]
+rosewater = "#f5e0dc"
+flamingo = "#f2cdcd"
+pink = "#f5c2e7"
+orange = "#cba6f7"
+red = "#f38ba8"
+maroon = "#eba0ac"
+peach = "#fab387"
+yellow = "#f9e2af"
+green = "#a6e3a1"
+teal = "#94e2d5"
+sky = "#89dceb"
+sapphire = "#74c7ec"
+blue = "#89b4fa"
+lavender = "#b4befe"
+text = "#cdd6f4"
+subtext1 = "#bac2de"
+subtext0 = "#a6adc8"
+overlay2 = "#9399b2"
+overlay1 = "#7f849c"
+overlay0 = "#6c7086"
+surface2 = "#585b70"
+surface1 = "#45475a"
+surface0 = "#313244"
+base = "#1e1e2e"
+mantle = "#181825"
+crust = "#11111b"
+
+[palettes.nord_colors]
+red = "#bf616a"
+orange = "#d08770"
+yellow = "#ebcb8b"
+green = "#a3be8c"
+lavender = "#b48ead"
+polar1 = "#2e3440"
+polar2 = "#3b4252"
+polar3 = "#434c5e"
+polar4 = "#4c566a"
+snow1 = "#d8dee9"
+snow2 = "#e5e9f0"
+snow3 = "#eceff4"
+frost1 = "#8fbcbb"
+frost2 = "#88c0d0"
+frost3 = "#81a1c1"
+frost4 = "#5e81ac"
+
+[os]
+disabled = false
+style = "bg:polar2 fg:frost2"
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = ""
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+
+[username]
+show_always = true
+style_user = "bg:polar2 fg:snow2"
+style_root = "bg:polar2 fg:snow2"
+format = '[ $user ]($style)'
+
+[directory]
+style = "fg:snow2 bg:polar3"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
+
+[git_branch]
+symbol = ""
+style = "bg:frost2"
+format = '[[ $symbol $branch ](fg:snow1 bg:polar2)]($style)'
+
+[git_status]
+style = "bg:frost2"
+format = '[[($all_status$ahead_behind )](fg:snow1 bg:polar1)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:frost2"
+format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
+
+[c]
+symbol = " "
+style = "bg:frost2"
+format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:frost2"
+format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:frost2"
+format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
+
+[php]
+symbol = ""
+style = "bg:frost2"
+format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
+
+[java]
+symbol = " "
+style = "bg:frost2"
+format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
+
+[kotlin]
+symbol = ""
+style = "bg:frost2"
+format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
+
+[haskell]
+symbol = ""
+style = "bg:frost2"
+format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
+
+[python]
+symbol = ""
+style = "bg:frost2"
+format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
+
+[docker_context]
+symbol = ""
+style = "bg:frost2"
+format = '[[ $symbol( $context) ](fg:snow1 bg:polar3)]($style)'
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:frost2"
+format = '[[  $time ](fg:snow2 bg:polar2)]($style)'
+
+[line_break]
+disabled = false
+
+[character]
+disabled = false
+success_symbol = '[](bold fg:frost2)'
+error_symbol = '[](bold fg:red)'
+vimcmd_symbol = '[](bold fg:frost2)'
+vimcmd_replace_one_symbol = '[](bold fg:lavender)'
+vimcmd_replace_symbol = '[](bold fg:lavender)'
+vimcmd_visual_symbol = '[](bold fg:lavender)'
